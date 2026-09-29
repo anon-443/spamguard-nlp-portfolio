@@ -68,7 +68,7 @@ SPAMGUARD_MODEL=artifacts/baseline/model.joblib uvicorn spamguard.api:app --app-
 
 Open `http://localhost:8019/docs` for interactive Swagger UI. `GET /health` reports readiness, and `POST /predict` accepts a JSON object such as `{"text":"Congratulations! Claim your free prize now"}`. The response includes the predicted label, spam probability, validation-selected threshold, and model name. `POST /predict/batch` accepts up to 20 messages. Avoid sending confidential SMS text to any temporary public demo.
 
-Temporary live demo for this task session: [Swagger UI](https://8765-iob7qxpw0ti3uvx48v4ep-a7a4073f.us4.manus.computer/docs) and [health check](https://8765-iob7qxpw0ti3uvx48v4ep-a7a4073f.us4.manus.computer/health). The service is temporary and does not persist after its Sandbox host session is stopped; the local command above is the reproducible deployment path.
+**Temporary demo status:** The task-session API stopped when its Sandbox was reset, so there is no active public endpoint at present. Start the API locally with the command above, or deploy the trained lexical model bundle for a persistent link.
 
 ## Tests, interpretation, and limitations
 
